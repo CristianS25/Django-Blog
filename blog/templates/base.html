@@ -1,0 +1,55 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--hoja de css-->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!--hoja de boostrap-->
+    <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.min.css' %}">
+    <title>DJANGO BLOG</title>
+</head>
+<body>
+    <section class="container text-center">
+        <header class="row">
+            {% if user.is_authenticated %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Inicio de sesion exitoso!</strong> Eri un Crack BD
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+                <h1>Hola 
+                    <small class="text-muted">{{user.username}}!</small>
+                </h1> 
+                <div class="nav">
+                    <ul class="nav justify">
+                        <li>
+                            <a class="btn btn-primary" href="{% url 'logout' %}">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+            {% else %}
+                <p class="lead">Usuario no ha iniciado sesión.</p>
+                <ul class="nav list-inline">
+                    <li class="list-inline-item">
+                        <a class="btn btn-primary" href="{% url 'login' %}">Log in</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="btn btn-primary" href="{% url 'signup' %}">sign up</a>
+                    </li>
+                    <li class="list-inline">
+                        <a class="btn btn-primary" href="{% url 'home' %}">Home</a>
+                    </li>
+                </ul>
+            {% endif %}
+        </header>
+        <div id="body" class="row text-center">
+            
+            {% block content %}
+            {% endblock content %}
+            
+        </div>
+    </section>
+    <scripts src="{% static 'bootstrap-5.2.2-dist/js/bootstrao.min.js' %}"></script>
+</body>
+</html>
