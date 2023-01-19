@@ -5,9 +5,10 @@ Contando con las siguientes funciones:<br />
 
 - Log In
 - Sing Up
+- Home 
 
 ## Importante
-En la siguiente ubiciación "Shop/requeriments.txt" encontrarás las dependencias para poder ejecutar el proyecto sin ningún inconveniente. <br />
+En la siguiente ubiciación "blog/requeriments.txt" encontrarás las dependencias para poder ejecutar el proyecto sin ningún inconveniente. <br />
 <b>Si no sabes cómo instalar las dependecias entra al siguiente link:</b>
 https://www.youtube.com/watch?v=vSpkN99PiyE
 
