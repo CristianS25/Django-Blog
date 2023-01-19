@@ -8,6 +8,7 @@ Contando con las siguientes funciones:<br />
 - Home 
 
 ## Importante
+</h3>En este proyecto usamos la version 3.11 de python</h3>
 En la siguiente ubiciación "blog/requeriments.txt" encontrarás las dependencias para poder ejecutar el proyecto sin ningún inconveniente. <br />
 <b>Si no sabes cómo instalar las dependecias entra al siguiente link:</b>
 https://www.youtube.com/watch?v=vSpkN99PiyE
